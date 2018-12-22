@@ -5,4 +5,4 @@ class MarkerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Marker
-        fields = ('id', 'phone', 'latitude', 'longitude', 'message', 'picture')
+        fields = ('id', 'phone', 'latitude', 'longitude', 'text', 'picture')

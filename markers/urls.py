@@ -1,7 +1,10 @@
 from django.urls import path
 from markers import views
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
-    path('markers/', views.marker_list),
-    path('markers/<int:pk>/', views.marker_detail),
+    path('markers/', views.MarkerListView.as_view()),
+    path('markers/<int:pk>/', views.MarkerDetailView.as_view()),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
